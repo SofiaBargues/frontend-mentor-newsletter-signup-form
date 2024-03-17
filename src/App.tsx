@@ -1,5 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import mobile from "../assets/images/illustration-sign-up-mobile.svg";
+import iconList from "../assets/images/icon-list.svg";
 import viteLogo from "/vite.svg";
 
 function App() {
@@ -8,21 +9,29 @@ function App() {
   return (
     <div>
       <div>
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <img src={mobile} className="logo react" alt="React logo" />
       </div>
       <div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <h1> Stay updated! </h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li className="flex">
+            <img src={iconList} className="logo react" alt="React logo" />
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li className="flex">
+            <img src={iconList} className="logo react" alt="React logo" />
+            <p> Measuring to ensure updates are a success</p>
+          </li>
+          <li className="flex">
+            <img src={iconList} className="logo react" alt="React logo" />
+            <p> And much more!</p>
+          </li>
+        </ul>
+        <form>
+          <label>Email address</label>
+          <input></input>
+        </form>
       </div>
     </div>
   );
