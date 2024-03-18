@@ -6,8 +6,8 @@ import iconList from "../assets/images/icon-list.svg";
 
 function App() {
   return (
-    <div className="sm:bg-slate-500 sm:h-screen sm:p-10">
-      <div className="flex flex-col sm:flex-row-reverse sm:p-4 sm:rounded-lg sm:bg-white ">
+    <div className=" sm:bg-slate-500 sm:h-screen sm:p-10">
+      <div className="flex flex-col sm:flex-row-reverse sm:p-4 sm:rounded-lg sm:bg-white sm:max-w-[928px]">
         <div className="block sm:hidden">
           <img src={mobile} />
         </div>
