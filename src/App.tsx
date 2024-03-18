@@ -1,13 +1,17 @@
 import { useState } from "react";
 import mobile from "../assets/images/illustration-sign-up-mobile.svg";
+import desktop from "../assets/images/illustration-sign-up-desktop.svg";
 import RobotoB from "../assets/fonts/Roboto-Bold.ttf";
 import iconList from "../assets/images/icon-list.svg";
 
 function App() {
   return (
-    <div>
-      <div>
+    <div className="flex flex-col sm:flex-row-reverse ">
+      <div className="block sm:hidden">
         <img src={mobile} />
+      </div>
+      <div className="hidden sm:block">
+        <img src={desktop} />
       </div>
       <div className="px-5 py-10">
         <h1 className="font-bold text-3xl text-blue-950"> Stay updated! </h1>
