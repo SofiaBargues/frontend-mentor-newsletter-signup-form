@@ -117,17 +117,13 @@ function SingUp() {
               </li>
             </ul>
             <form action="email" method="GET" className="flex flex-col mt-7">
-              <div className="label-box">
-                <label
-                  ref={inputRefEmail}
-                  className="text-xs font-extrabold  text-blue-950  "
-                >
+              <div className="label-box flex justify-between">
+                <div className="text-xs font-bold flex text-blue-950  ">
                   Email address
-                </label>
-                {/* <label
-                  ref={errorEmail}
-                  className="text-xs font-extrabold  text-blue-950  "
-                ></label> */}
+                </div>
+                <div className="text-xs font-bold  text-[#FF6155]  ">
+                  {errorEmail}
+                </div>
               </div>
               <div className="">
                 <input
