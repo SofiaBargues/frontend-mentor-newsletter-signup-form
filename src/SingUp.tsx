@@ -1,9 +1,42 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import mobile from "../assets/images/illustration-sign-up-mobile.svg";
 import desktop from "../assets/images/illustration-sign-up-desktop.svg";
 import RobotoB from "../assets/fonts/Roboto-Bold.ttf";
 import iconList from "../assets/images/icon-list.svg";
 function SingUp() {
+  const [errorEmail, setErrorEmail] = useState("");
+  const [isActivrError, setIsActivrError] = useState(false);
+  const [showState, setShowState] = useState(false);
+  const inputRefEmail = useRef(null);
+
+  function isValidEmail(email) {
+    return /\S+@S+\.\S+/.test(email);
+  }
+
+  const swichToSingup = () => {
+    setShowState(false);
+  };
+
+  const currentEmailValue = () => {
+    return inputRefEmail.current.value;
+  };
+
+  const submitEmail = (event) => {
+    event.preventDefault();
+    if (
+      inputRefEmail.current.value === "" ||
+      !isValidEmail(inputRefEmail.current.value)
+    ) {
+      setErrorEmail("Valid email required");
+      setIsActivrError(true);
+      setShowState(false);
+    } else {
+      setErrorEmail("");
+      setIsActivrError(false);
+      setShowState(true);
+    }
+  };
+
   const thankState = () => {
     return (
       <div>
@@ -89,7 +122,7 @@ function SingUp() {
                 <input
                   type="email"
                   placeholder="email@company.com"
-                  className="border rounded-md lg:h-[58px] w-full my-3 px-5  "
+                  className="h-11 border rounded-md lg:h-[58px] w-full my-3 px-5  "
                 ></input>
 
                 <button
@@ -105,7 +138,11 @@ function SingUp() {
       </div>
     );
   };
-  return <div>{singupState()}</div>;
+  return (
+    <div>
+      {showState ? <div>{thankState()}</div> : <div>{singupState()}</div>}
+    </div>
+  );
 }
 
 export default SingUp;
