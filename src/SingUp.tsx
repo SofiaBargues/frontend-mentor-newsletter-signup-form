@@ -9,36 +9,35 @@ function SingUp() {
       <div>
         {" "}
         <div className="h-screen  lg:bg-[rgb(54,56,76)] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
-          <div className="h-screen  m-6 lg:h-[520px] flex flex-col justify-center  lg:flex-col lg:p-10 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
-            <div className="">
-              <img src={iconList} className="h-[64px]" />
-            </div>
-
-            <div className=" py-6 lg:m-10 lg:flex lg:flex-col lg:justify-around">
-              <div className="flex flex-col justify-">
-                <h1 className="font-bold text-3xl text-[#242742] lg:text-6xl ">
+          <div className="m-6 lg:m-0  lg:h-[520px] flex flex-col justify-center  lg:flex-col lg:p-20 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
+            <div className=" py-6 lg:my-10 lg:flex lg:flex-col lg:justify-around">
+              <div className="flex flex-col gap-9">
+                <div className="">
+                  <img src={iconList} className="lg:mt-20 h-[64px]" />
+                </div>
+                <h1 className="font-bold text-3xl text-[#242742] lg:text-5xl ">
                   Thanks for<br></br> subscribing!
                 </h1>
-                <p className="my-5 w-[327px] h-[96px] text-sm text-[#242742] lg:text-lg">
+                <p className="my-5  lg:my-0 w-[376px] h-[96px] lg:h-[72px] lg:text-left lg:text-sm text-[#242742]">
                   A confirmation email has been sent to{" "}
                   <span className="font-bold">ash@loremcompany.com</span>.
                   Please open it and click the button inside to confirm your
                   subscription.
                 </p>
+                <form
+                  action="email"
+                  method="GET"
+                  className="flex flex-col justify-end lg:justify-normal h-[150px]"
+                >
+                  <button
+                    className="bg-blue-950 text-sm lg:text-2xl lg:rounded-2xl lg:w-[376px] lg:h-[56px] font-semibold text-white w-full h-11 rounded-md"
+                    type="submit"
+                  >
+                    Dismiss message
+                  </button>
+                </form>
               </div>
             </div>
-            <form
-              action="email"
-              method="GET"
-              className="flex flex-col justify-end h-[150px]"
-            >
-              <button
-                className="bg-blue-950 text-sm lg:text-2xl lg:rounded-2xl  font-semibold text-white  w-full  h-11 lg:h-20  rounded-md"
-                type="submit"
-              >
-                Dismiss message
-              </button>
-            </form>
           </div>
         </div>
       </div>
