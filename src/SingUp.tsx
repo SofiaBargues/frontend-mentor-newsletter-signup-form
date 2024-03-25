@@ -142,7 +142,7 @@ function SingUp() {
 
                 <button
                   onClick={submitEmail}
-                  className="hover:bg-[#ff6742] sm:h-[58px] hover:shadow-sm hover:shadow-[#ffa8a2] hover:bg-gradient-to-b from-[#FF6A3A] to-[#FF527B] bg-blue-950 text-sm  font-semibold text-white  w-full  h-11 rounded-md"
+                  className="hover:bg-[#ff6742] sm:h-[58px] hover:shadow-xl hover:shadow-[#ffa8a2] hover:bg-gradient-to-b from-[#FF6A3A] to-[#FF527B] bg-blue-950 text-sm  font-semibold text-white  w-full  h-11 rounded-md"
                   type="submit"
                 >
                   Subscribe to monthly newsletter
