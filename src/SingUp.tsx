@@ -4,6 +4,47 @@ import desktop from "../assets/images/illustration-sign-up-desktop.svg";
 import RobotoB from "../assets/fonts/Roboto-Bold.ttf";
 import iconList from "../assets/images/icon-list.svg";
 function SingUp() {
+  const thankState = () => {
+    return (
+      <div>
+        {" "}
+        <div className="h-screen  lg:bg-[rgb(54,56,76)] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
+          <div className="h-screen  m-6 lg:h-[520px] flex flex-col justify-center  lg:flex-col lg:p-10 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
+            <div className="">
+              <img src={iconList} className="h-[64px]" />
+            </div>
+
+            <div className=" py-6 lg:m-10 lg:flex lg:flex-col lg:justify-around">
+              <div className="flex flex-col justify-">
+                <h1 className="font-bold text-3xl text-[#242742] lg:text-6xl ">
+                  Thanks for<br></br> subscribing!
+                </h1>
+                <p className="my-5 w-[327px] h-[96px] text-sm text-[#242742] lg:text-lg">
+                  A confirmation email has been sent to{" "}
+                  <span className="font-bold">ash@loremcompany.com</span>.
+                  Please open it and click the button inside to confirm your
+                  subscription.
+                </p>
+              </div>
+            </div>
+            <form
+              action="email"
+              method="GET"
+              className="flex flex-col justify-end h-[150px]"
+            >
+              <button
+                className="bg-blue-950 text-sm lg:text-2xl lg:rounded-2xl  font-semibold text-white  w-full  h-11 lg:h-20  rounded-md"
+                type="submit"
+              >
+                Dismiss message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const singupState = () => {
     return (
       <div className=" lg:bg-[#36384c] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
@@ -64,7 +105,7 @@ function SingUp() {
       </div>
     );
   };
-  return <div>{singupState()}</div>;
+  return <div>{thankState()}</div>;
 }
 
 export default SingUp;
