@@ -1,15 +1,15 @@
 import { useRef, useState } from "react";
 import mobile from "../assets/images/illustration-sign-up-mobile.svg";
 import desktop from "../assets/images/illustration-sign-up-desktop.svg";
-import RobotoB from "../assets/fonts/Roboto-Bold.ttf";
+// import RobotoB from "../assets/fonts/Roboto-Bold.ttf";
 import iconList from "../assets/images/icon-list.svg";
 function SingUp() {
   const [errorEmail, setErrorEmail] = useState("");
   const [isActiveError, setIsActiveError] = useState(false);
   const [showState, setShowState] = useState(false);
-  const inputRefEmail = useRef(null);
+  const inputRefEmail = useRef<HTMLInputElement>(null);
 
-  function isValidEmail(email) {
+  function isValidEmail(email: string) {
     return /\S+@\S+\.\S+/.test(email);
   }
 
@@ -18,15 +18,19 @@ function SingUp() {
   };
 
   const currentEmailValue = () => {
-    return inputRefEmail.current.value;
+    const current = inputRefEmail.current;
+    if (current) {
+      return current.value;
+    }
   };
 
-  const submitEmail = (event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const submitEmail = (event: any) => {
     event.preventDefault();
-    console.log(inputRefEmail.current.value);
+    console.log(inputRefEmail.current?.value);
     if (
-      inputRefEmail.current.value === "" ||
-      !isValidEmail(inputRefEmail.current.value)
+      inputRefEmail.current?.value === "" ||
+      !isValidEmail(inputRefEmail.current?.value || "")
     ) {
       setErrorEmail("Valid email required");
       setIsActiveError(true);
