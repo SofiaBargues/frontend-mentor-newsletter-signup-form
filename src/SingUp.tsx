@@ -30,7 +30,7 @@ function SingUp() {
                   className="flex flex-col justify-end lg:justify-normal h-[150px]"
                 >
                   <button
-                    className="bg-blue-950 text-sm lg:text-xl lg:rounded-2xl lg:w-[376px] lg:h-[56px] font-semibold text-white w-full h-11 rounded-md"
+                    className="hover:bg-[#ff6742] hover:shadow-lg hover:shadow-[#ffa8a2] hover:bg-gradient-to-b from-[#FF6A3A] to-[#FF527B] bg-blue-950 text-sm lg:text-xl lg:rounded-2xl lg:w-[376px] lg:h-[56px] font-semibold text-white w-full h-11 rounded-md"
                     type="submit"
                   >
                     Dismiss message
