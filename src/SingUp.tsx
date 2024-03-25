@@ -46,15 +46,15 @@ function SingUp() {
 
   const singupState = () => {
     return (
-      <div className=" lg:bg-[#36384c] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
-        <div className="flex flex-col lg:flex-row-reverse lg:p-4 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
+      <div className=" lg:bg-[#36384c] lg:h-screen  lg:p-10 lg:items-center lg:justify-center  lg:grid">
+        <div className=" flex flex-col lg:flex-row-reverse lg:p-4 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
           <div className="block lg:hidden">
             <img src={mobile} />
           </div>
           <div className="hidden lg:block">
             <img src={desktop} />
           </div>
-          <div className="px-5 py-10 lg:mx-6 lg:flex lg:flex-col lg:justify-around">
+          <div className="px-5  py-10 lg:mx-10 lg:flex lg:flex-col lg:justify-around">
             <h1 className="font-bold text-3xl text-blue-950  lg:text-6xl">
               {" "}
               Stay updated!{" "}
@@ -89,10 +89,11 @@ function SingUp() {
                 <input
                   type="email"
                   placeholder="email@company.com"
-                  className="border rounded-md h-10 w-full my-3 px-5  "
+                  className="border rounded-md lg:h-[58px] w-full my-3 px-5  "
                 ></input>
+
                 <button
-                  className="bg-blue-950 text-sm  font-semibold text-white  w-full  h-11 rounded-md"
+                  className="hover:bg-[#ff6742] lg:h-[58px] hover:shadow-lg hover:shadow-[#ffa8a2] hover:bg-gradient-to-b from-[#FF6A3A] to-[#FF527B] bg-blue-950 text-sm  font-semibold text-white  w-full  h-11 rounded-md"
                   type="submit"
                 >
                   Subscribe to monthly newsletter
@@ -104,7 +105,7 @@ function SingUp() {
       </div>
     );
   };
-  return <div>{thankState()}</div>;
+  return <div>{singupState()}</div>;
 }
 
 export default SingUp;
