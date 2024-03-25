@@ -42,8 +42,8 @@ function SingUp() {
     return (
       <div>
         {" "}
-        <div className="h-screen  lg:bg-[rgb(54,56,76)] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
-          <div className="m-6 lg:m-0  lg:h-[520px] flex flex-col justify-center  lg:flex-col lg:p-20 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
+        <div className="h-screen lg:bg-[rgb(54,56,76)] lg:h-screen lg:p-10 lg:items-center lg:justify-center  lg:grid">
+          <div className="m-6 lg:m-0 lg:h-[520px] flex flex-col justify-center  lg:flex-col lg:p-20 lg:rounded-2xl lg:bg-white lg:max-w-[928px] ">
             <div className=" py-6 lg:my-10 lg:flex lg:flex-col lg:justify-around">
               <div className="flex flex-col gap-9">
                 <div className="">
