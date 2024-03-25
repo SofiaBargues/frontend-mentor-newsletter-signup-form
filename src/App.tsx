@@ -6,7 +6,7 @@ import iconList from "../assets/images/icon-list.svg";
 
 function App() {
   return (
-    <div className=" sm:bg-[#37384e] sm:h-screen sm:p-10 sm:items-center sm:justify-center  sm:grid">
+    <div className=" sm:bg-[#36384c] sm:h-screen sm:p-10 sm:items-center sm:justify-center  sm:grid">
       <div className="flex flex-col sm:flex-row-reverse sm:p-4 sm:rounded-2xl sm:bg-white sm:max-w-[928px] ">
         <div className="block sm:hidden">
           <img src={mobile} />
@@ -14,32 +14,35 @@ function App() {
         <div className="hidden sm:block">
           <img src={desktop} />
         </div>
-        <div className="px-5 py-10">
-          <h1 className="font-bold text-3xl text-blue-950"> Stay updated! </h1>
-          <p className="my-5 text-sm">
+        <div className="px-5 py-10 sm:mx-6 sm:flex sm:flex-col sm:justify-around">
+          <h1 className="font-bold text-3xl text-blue-950  sm:text-6xl">
+            {" "}
+            Stay updated!{" "}
+          </h1>
+          <p className="my-5 text-sm sm:text-lg">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
           <ul className="">
-            <li className="flex">
+            <li className="flex sm:items-center">
               <img src={iconList} className=" h-4" />
-              <p className="mx-3  text-sm">
+              <p className="mx-3   text-sm sm:text-lg">
                 Product discovery and building what matters
               </p>
             </li>
-            <li className="flex">
+            <li className="flex sm:items-center">
               <img src={iconList} className=" h-4" alt="React logo" />
-              <p className="mx-3  text-sm">
+              <p className="mx-3  text-sm sm:text-lg">
                 {" "}
                 Measuring to ensure updates are a success
               </p>
             </li>
-            <li className="flex">
+            <li className="flex sm:items-center">
               <img src={iconList} className=" h-4" alt="React logo" />
-              <p className="mx-3  text-sm"> And much more!</p>
+              <p className="mx-3  text-sm sm:text-lg"> And much more!</p>
             </li>
           </ul>
           <form action="email" method="GET" className="flex flex-col mt-7">
-            <label className="text-xs font-semibold  text-blue-950 ">
+            <label className="text-xs font-extrabold  text-blue-950  ">
               Email address
             </label>
             <div className="">
