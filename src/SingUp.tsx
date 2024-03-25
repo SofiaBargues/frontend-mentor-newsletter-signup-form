@@ -82,7 +82,7 @@ function SingUp() {
   const singupState = () => {
     return (
       <div className=" sm:bg-[#36384c] sm:h-screen  sm:p-10 sm:items-center sm:justify-center  sm:grid">
-        <div className=" flex items-center flex-col sm:flex-row-reverse sm:p-4 sm:rounded-2xl sm:bg-white sm:max-w-[928px] ">
+        <div className="max-w-[375px] flex items-center m-auto flex-col sm:flex-row-reverse sm:p-4 sm:rounded-2xl sm:bg-white sm:max-w-[928px] ">
           <div className="block self-center sm:hidden">
             <img src={mobile} />
           </div>
@@ -151,6 +151,9 @@ function SingUp() {
             </form>
           </div>
         </div>
+        {/* <div className=" text-red-300  hover:text-yellow-300   from-red-200 to- f font-medium rounded-lg text-xl  text-center flex align-bottom   ">
+          Sofi 🌼
+        </div> */}
       </div>
     );
   };
