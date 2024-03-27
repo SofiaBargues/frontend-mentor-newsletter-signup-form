@@ -155,9 +155,6 @@ function SingUp() {
             </form>
           </div>
         </div>
-        {/* <div className=" text-red-300  hover:text-yellow-300   from-red-200 to- f font-medium rounded-lg text-xl  text-center flex align-bottom   ">
-          Sofi 🌼
-        </div> */}
       </div>
     );
   };
